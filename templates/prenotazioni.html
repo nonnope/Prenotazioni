@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenotazione - EcoFriendly Delivery</title>
+    <!-- Collegamento al file CSS principale -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Intestazione principale del sito -->
+	<header>
+		<h1>EcoFriendly Delivery</h1>
+		<p>La consegna ecologica per una città più verde</p>
+	</header>
+
+     <!-- Contenitore principale -->
+    <div class="container">
+        <h1>Prenotazione</h1>
+        <!-- Form principale per la prenotazione -->
+        <form id="prenotazione-form">
+            <!-- Sezione per i dettagli di partenza -->
+            <fieldset class="sezione">
+                <legend>Partenza</legend>
+                
+				<!-- Nome del referente -->
+                <label for="ritiro_nome">Nome del Referente:</label>
+                <input type="text" id="ritiro_nome" name="ritiro_nome" placeholder="Inserisci il nome" required>
+               
+				<!-- Email di partenza -->
+                <label for="ritiro_email">Email:</label>
+                <input type="email" id="ritiro_email" name="ritiro_email" placeholder="Inserisci l'email" required>
+                
+				<!-- Telefono di partenza -->
+                <label for="ritiro_telefono">Telefono:</label>
+                <input type="tel" id="ritiro_telefono" name="ritiro_telefono" placeholder="Inserisci il numero di telefono" required>
+                
+				<!-- Città di partenza -->
+                <label for="citta">Città:</label>
+                <select id="citta" name="citta" required>
+                    <option value="">Seleziona una città</option>
+                    <option value="Milano">Milano</option>
+                    <option value="Torino">Torino</option>
+                    <option value="Roma">Roma</option>
+                    <option value="Napoli">Napoli</option>
+                    <option value="Bologna">Bologna</option>
+                </select>
+
+                <!-- Indirizzo di ritiro -->
+                <label for="ritiro_indirizzo">Indirizzo di Ritiro:</label>
+                <input type="text" id="ritiro_indirizzo" name="ritiro_indirizzo" placeholder="Inserisci l'indirizzo di ritiro" required>
+
+                <!-- Data e ora di ritiro -->
+                <label for="ritiro_dataora">Data e Ora di Ritiro:</label>
+                <input type="datetime-local" id="ritiro_dataora" name="ritiro_dataora" required>
+            </fieldset>
+
+            <!-- Sezione per i dettagli di destinazione -->
+            <fieldset class="sezione">
+                <legend>Destinazione</legend>
+                <!-- Nome del referente di destinazione -->
+                <label for="consegna_nome">Nome del Referente:</label>
+                <input type="text" id="consegna_nome" name="consegna_nome" placeholder="Inserisci il nome" required>
+
+                <!-- Email di destinazione -->
+                <label for="consegna_email">Email:</label>
+                <input type="email" id="consegna_email" name="consegna_email" placeholder="Inserisci l'email" required>
+
+                <!-- Telefono di destinazione -->
+                <label for="consegna_telefono">Telefono:</label>
+                <input type="tel" id="consegna_telefono" name="consegna_telefono" placeholder="Inserisci il numero di telefono" required>
+
+                <!-- Indirizzo di consegna -->
+                <label for="consegna_indirizzo">Indirizzo di Consegna:</label>
+                <input type="text" id="consegna_indirizzo" name="consegna_indirizzo" placeholder="Inserisci l'indirizzo di consegna" required>
+            </fieldset>
+
+            <!-- Campo per il peso del pacco -->
+            <label for="peso_pacco">Peso del Pacco (kg):</label>
+            <input type="number" id="peso_pacco" name="peso_pacco" placeholder="Inserisci il peso" min="0.1" step="0.1" required>
+
+            <!-- Pulsanti di azione -->
+            <div class="azioni">
+                <button type="submit" id="conferma">Conferma Prenotazione</button>
+                <button type="button" id="modifica">Modifica Prenotazione</button>
+                <button type="button" id="elimina">Cancella Prenotazione</button>
+                <button type="button" id="calcolo">Calcola Spedizione</button>
+            </div>
+        </form>
+		
+		<!-- Area notifiche per messaggi di feedback -->
+		<div id="area-notifica" class="area-notifica"></div>
+		
+		<!-- Sezione condizioni -->
+		<div class="condizioni">
+		<h2>Condizioni della Prenotazione</h2>
+		<p>
+			Le prenotazioni devono essere effettuate almeno un'ora prima del ritiro. 
+			Gli orari disponibili sono dalle 8:00 alle 17:00, dal lunedì al sabato.
+			Non accettiamo prenotazioni nei giorni festivi e la domenica.
+		</p>
+		</div>
+
+        <!-- Tabella delle tariffe di spedizione -->
+        <div class="tariffe">
+            <h2>Tariffe di Spedizione</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Da kg</th>
+                        <th>A kg</th>
+                        <th>Prezzo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>0</td><td>1</td><td>&euro; 13,52</td></tr>
+                    <tr><td>2</td><td>3</td><td>&euro; 15,55</td></tr>
+                    <tr><td>4</td><td>5</td><td>&euro; 18,00</td></tr>
+                    <tr><td>6</td><td>10</td><td>&euro; 19,60</td></tr>
+                    <tr><td>11</td><td>20</td><td>&euro; 22,13</td></tr>
+                    <tr><td>21</td><td>30</td><td>&euro; 23,23</td></tr>
+                    <tr><td>31</td><td>40</td><td>&euro; 26,60</td></tr>
+                    <tr><td>41</td><td>50</td><td>&euro; 29,00</td></tr>
+                    <tr><td>51</td><td>75</td><td>&euro; 34,00</td></tr>
+                    <tr><td>76</td><td>100</td><td>&euro; 45,00</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Collegamento al file JavaScript principale -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+/* Stile generale */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #eef2f3;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Intestazione del sito */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    margin: 0;
+	color: #28a745;
+	text-shadow: 0.5px 1px white;
+}
+
+header p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Contenitore principale */
+.container {
+    max-width: 980px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Titoli generali*/
+h1, h2 {
+    text-align: center;
+    color: #333;
+	
+}
+
+/* Stli del modulo principale */
+form {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: space-between;
+}
+
+
+/* Input, Select e Textarea */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+/* Stile specifico per il peso del pacco */
+.peso-pacco {
+    text-align: right;
+    width: 100%;
+}
+
+.peso-pacco input {
+    width: 50%;
+}
+
+/* Pulsanti di azione */
+.azioni {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 10px;
+    width: 100%;
+}
+
+.azioni button {
+    flex: 1; 
+    min-width: 150px;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-shadow: 0.3px 0.3px #28a745;
+    transition: all 0.3s ease;
+}
+
+.azioni button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    text-shadow: 1px 1px #333;
+}
+
+/* Sezione Condizioni */
+.condizioni {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.condizioni h2 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.condizioni p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+}
+
+
+/* Area notifiche */
+.area-notifica {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.notifica {
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInOut 4s forwards;
+}
+
+/* Tipi di notifiche */
+.notifica.success {
+    background-color: #28a745;
+}
+
+.notifica.error {
+    background-color: #dc3545;
+}
+
+.notifica.info {
+    background-color: #007bff;
+}
+
+/* Animazione per le notifiche */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    10%, 90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* Tabella delle tariffe */
+.tariffe {
+    margin-top: 20px;
+}
+
+.tariffe h2 {
+    text-align: center;
+    color: #555;
+}
+
+/* Stile per le tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+/* Sezione Condizioni */
+.condizioni {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.condizioni h2 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.condizioni p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+}
