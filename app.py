@@ -399,12 +399,12 @@ class SyncLog(db.Model):
 
 # Dizionario per le email specifiche per città
 EMAIL_CITTA = {
-    "Milano": [ "pinoizzo@katamail.com"],
-    "Roma": ["roma_ufficio1@example.com", "roma_ufficio2@example.com", "pinoizzo@katamail.com"],
-    "Torino": ["torino_ufficio1@example.com", "torino_ufficio2@example.com", "pinoizzo@katamail.com"],
-    "Napoli": ["napoli@example.com", "napoli_ufficio_2@example.com", "pinoizzo@katamail.com"],
-    "Bologna": ["bologna@example.com", "bologna_ufficio2@example.com", "pinoizzo@katamail.com"],
-    "Firenze": ["firenze@example.com", "firenze_ufficio2@example.com", "pinoizzo@katamail.com"]
+    "Milano": [ milano_ufficio1@example.com", "milano_ufficio2@example.com"],
+    "Roma": ["roma_ufficio1@example.com", "roma_ufficio2@example.com"],
+    "Torino": ["torino_ufficio1@example.com", "torino_ufficio2@example.com"],
+    "Napoli": ["napoli@example.com", "napoli_ufficio_2@example.com"],
+    "Bologna": ["bologna@example.com", "bologna_ufficio2@example.com"],
+    "Firenze": ["firenze@example.com", "firenze_ufficio2@example.com"]
     }
 # Funzione per ottenere l'ultimo timestamp
 def ultima_sincro(citta):
