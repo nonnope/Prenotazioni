@@ -63,12 +63,21 @@ pip install -r backend/requirements.txt
 
 4. Configura il file .env per le variabili di ambiente (es. credenziali,
    configurazioni).
+   
+6. Genera il database (solo la prima volta):
 
-5. Avvia il server:
+Per creare il database prenotazioni.db, modifica il file app.py come segue:
+
+if **name** == "**main**":
+   with app.app_context():
+      db.create_all() # Crea il database e le tabelle
+   app.run(host="0.0.0.0", port=5000, debug=False)
+
+6. Avvia il server:
 
 python backend/app.py
 
-6. Accedi al server tramite http://127.0.0.1:5000.
+7. Accedi al server tramite http://127.0.0.1:5000.
 
 # Struttura Backend
 
