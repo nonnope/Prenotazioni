@@ -115,7 +115,6 @@ SMTP_SERVER=smtp.example.com
 SMTP_PORT=587
 EMAIL_ALIAS=example@example.com
 
-Nota: Non condividere il file .env su GitHub o altre piattaforme pubbliche.
 
 # File .gitignore
 
