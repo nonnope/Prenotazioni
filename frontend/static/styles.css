@@ -48,35 +48,7 @@ body {
     text-shadow: 2px 2px 0px #000, 4px 4px 0px rgba(0, 0, 0, 0.3); 
     font-weight: bold; 
 }
-/*header {
-    background-color: #333;
-    color: white;
-    padding: 15px 0; 
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    position: sticky;
-    top: 0;
-}
 
-header h1 {
-    margin: 0;
-	color: #28a745;
-	text-shadow: 2px 2px 0px #000, 4px 4px 0px rgba(0, 0, 0, 0.3); 
-    font-weight: bold; 
-    text-align: center; 
-}
-
-header p {
-    font-size: 15px;
-    margin-top: 5px;
-    color: #ffffff;
-    text-shadow: 2px 2px 0px #000, 4px 4px 0px rgba(0, 0, 0, 0.3); 
-    font-weight: bold; 
-    text-align: center;
-}
-*/
 /* Immagine di sfondo */
 .bg-img{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("sfondo.webp");
