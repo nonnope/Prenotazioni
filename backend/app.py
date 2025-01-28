@@ -5,6 +5,7 @@ from routes import register_blueprints
 from config import Config
 import threading
 import logging
+import os
 from utils.scheduling import schedule_runner
 from models import db
 
@@ -23,13 +24,22 @@ register_blueprints(app)
 def home():
     return render_template("prenotazioni.html")
 
-# Configurazione del logging per registrare eventi e debug dell'applicazione
+
+# Definizione del percorso per il file di log
+log_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "app.log")
+
+# Creazione del file di log se non esiste
+if not os.path.exists(log_dir):
+    open(log_dir, 'w').close()  # Crea un file vuoto
+
+# Configurazione del logging
 logging.basicConfig(
-    filename='backend/app.log',  
+    filename=log_dir,  
     level=logging.DEBUG,  
     format='%(asctime)s - %(levelname)s - %(message)s',  
     filemode='a'  
 )
+
 
 # Avvia un thread separato per eseguire task pianificati in background
 logging.info("Avvio del thread per i task pianificati.")
@@ -37,6 +47,7 @@ schedule_thread = threading.Thread(target=schedule_runner, args=(app,))
 schedule_thread.daemon = True
 schedule_thread.start()
 logging.info("Therad avviato con successo")
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=False)
