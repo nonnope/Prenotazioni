@@ -81,7 +81,7 @@ def add_prenotazione():
     - Codice Prenotazione: {codice_prenotazione}
     - Città: {data.get("citta")}
     - Indirizzo di Ritiro: {data.get("ritiro_indirizzo")}
-    - Data e Ora di Ritiro: {data.get("ritiro_dataora")} 
+    - Data e Ora di Ritiro: {ritiro_dataora.strftime('%d-%m-%Y alle %H:%M')} 
     - Nome referente per la consegna: {data.get("consegna_nome")}
     - Telefono referente: {data.get("consegna_telefono")}
     - Email referente: {data.get("consegna_email")}
@@ -182,15 +182,14 @@ def modifica_prenotazione(codice_prenotazione):
     Dettagli Prenotazione:
 
     - Codice Prenotazione: {codice_prenotazione}
-    - Città: {data.get("citta")}
-    - Indirizzo di Ritiro: {data.get("ritiro_indirizzo")}
-    - Data e Ora di Ritiro: {data.get("ritiro_dataora")}
-    - Nome referente per la consegna: {data.get("consegna_nome")}
-    - Telefono referente: {data.get("consegna_telefono")}
-    - Email referente: {data.get("consegna_email")} 
-    - Indirizzo di Consegna: {data.get("consegna_indirizzo")}
-    - Peso del Pacco: {data.get("peso_pacco")} kg
-    
+    - Città: {prenotazione.citta}
+    - Indirizzo di Ritiro: {prenotazione.ritiro_indirizzo}
+    - Data e Ora di Ritiro: {prenotazione.ritiro_dataora.strftime('%d-%m-%Y alle %H:%M')}
+    - Nome referente per la consegna: {prenotazione.consegna_nome}
+    - Telefono referente: {prenotazione.consegna_telefono}
+    - Email referente: {prenotazione.consegna_email}
+    - Indirizzo di Consegna: {prenotazione.consegna_indirizzo}
+    - Peso del Pacco: {prenotazione.peso_pacco} kg
      
     Cordiali saluti,  
     Il team Eco Friendly Delivery
