@@ -14,7 +14,6 @@ Questo progetto è organizzato in due sezioni principali: Backend e Frontend, co
 # Struttura del Progetto
 
 backend/
-├── .venv/
 ├── database/
 │ └── prenotazioni.db
 ├── routes/
@@ -69,9 +68,9 @@ pip install -r backend/requirements.txt
 Per creare il database prenotazioni.db, modifica il file app.py come segue:
 
 if **name** == "**main**":
-with app.app_context():
-db.create_all() # Crea il database e le tabelle
-app.run(host="0.0.0.0", port=5000, debug=False)
+   with app.app_context():
+      db.create_all() # Crea il database e le tabelle
+   app.run(host="0.0.0.0", port=5000, debug=False)
 
 6. Avvia il server:
 
@@ -136,3 +135,4 @@ Ambiente virtuale
 .venv/
 env/
 \*.env
+
